@@ -1,0 +1,525 @@
+@IMDB_Top_Rated_show
+Feature: verify the Top Rated show_Functionality
+
+  Scenario: Verify Todos text box should be enabled and allow to enter data's [90m# featurefile/todos/todos.feature:5[0m
+    [32mGiven [0m[32mopen the valid url in todos application[0m                             [90m# Search_Test_step.OpentodosApp()[0m
+    [32mThen [0m[32mEnter the valid search name in search field "[0m[32m[1mTest1[0m[32m"[0m                  [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [32mThen [0m[32mVerify todos data is displayed "[0m[32m[1mTest1[0m[32m"[0m                               [90m# Top_Rated.VerifyTodosDisplayed(String)[0m
+
+  Scenario: Verify Completed button should be displayed in Todos screen [90m# featurefile/todos/todos.feature:10[0m
+    [32mGiven [0m[32mopen the valid url in todos application[0m                       [90m# Search_Test_step.OpentodosApp()[0m
+    [32mThen [0m[32mEnter the valid search name in search field "[0m[32m[1mTest1[0m[32m"[0m            [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [32mThen [0m[32mclick completed icon in todos screen[0m                           [90m# Top_Rated.click_completedScreen()[0m
+
+  Scenario: verify clear completed should be displayed in Todos screen [90m# featurefile/todos/todos.feature:15[0m
+    [32mGiven [0m[32mopen the valid url in todos application[0m                      [90m# Search_Test_step.OpentodosApp()[0m
+    [32mThen [0m[32mEnter the valid search name in search field "[0m[32m[1mTest1[0m[32m"[0m           [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [32mThen [0m[32mclick clear completed icon in todos screen[0m                    [90m# Top_Rated.ClearCompleted()[0m
+
+  Scenario: verify Active should be working properly in Todos screen [90m# featurefile/todos/todos.feature:20[0m
+    [32mGiven [0m[32mopen the valid url in todos application[0m                    [90m# Search_Test_step.OpentodosApp()[0m
+    [32mThen [0m[32mEnter the valid search name in search field "[0m[32m[1mTest1[0m[32m"[0m         [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [32mThen [0m[32mclick the Active button in todos screen[0m                     [90m# Top_Rated.click_ClickActiveButton()[0m
+    [32mThen [0m[32mVerify todos data is displayed "[0m[32m[1mTest1[0m[32m"[0m                      [90m# Top_Rated.VerifyTodosDisplayed(String)[0m
+[31mFailure in before hook:[0m[31mTestBase.before()[0m
+[31mMessage: [0m[31morg.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+System info: host: 'LAPTOP-P9U8PG08', ip: '192.168.1.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:192)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:178)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:78)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:254)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:137)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:178)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:146)
+	at com.cucumber.framework.configuration.browser.ChromeBrowser.getChromeDriver(ChromeBrowser.java:45)
+	at com.cucumber.framework.helper.TestBase.TestBase.getBrowserObject(TestBase.java:83)
+	at com.cucumber.framework.helper.TestBase.TestBase.setUpDriver(TestBase.java:96)
+	at com.cucumber.framework.helper.TestBase.TestBase.before(TestBase.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20757/status] to be available after 20002 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:102)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:187)
+	... 52 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:147)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:77)
+	... 53 more
+[0m
+      [31morg.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+      Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+      System info: host: 'LAPTOP-P9U8PG08', ip: '192.168.1.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+      Driver info: driver.version: ChromeDriver
+      	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:192)
+      	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:178)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:78)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+      	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:254)
+      	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+      	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:137)
+      	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:178)
+      	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:146)
+      	at com.cucumber.framework.configuration.browser.ChromeBrowser.getChromeDriver(ChromeBrowser.java:45)
+      	at com.cucumber.framework.helper.TestBase.TestBase.getBrowserObject(TestBase.java:83)
+      	at com.cucumber.framework.helper.TestBase.TestBase.setUpDriver(TestBase.java:96)
+      	at com.cucumber.framework.helper.TestBase.TestBase.before(TestBase.java:109)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at cucumber.runtime.Utils$1.call(Utils.java:40)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+      	at cucumber.runtime.Utils.invoke(Utils.java:34)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+      	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+      	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+      	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+      	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+      	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+      	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+      	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+      	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+      	at org.testng.TestRunner.run(TestRunner.java:505)
+      	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+      	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+      	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+      	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+      	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+      	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+      	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+      	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+      	at org.testng.TestNG.runSuites(TestNG.java:1049)
+      	at org.testng.TestNG.run(TestNG.java:1017)
+      	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+      	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+      	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+      Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20757/status] to be available after 20002 ms
+      	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:102)
+      	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:187)
+      	... 52 more
+      Caused by: java.util.concurrent.TimeoutException
+      	at java.util.concurrent.FutureTask.get(Unknown Source)
+      	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:147)
+      	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:77)
+      	... 53 more
+      [0m
+
+  Scenario: verify Active should be working properly in Todos screen [90m# featurefile/todos/todos.feature:26[0m
+    [32mGiven [0m[32mopen the valid url in todos application[0m                    [90m# Search_Test_step.OpentodosApp()[0m
+    [32mThen [0m[32mEnter the valid search name in search field "[0m[32m[1mTest1[0m[32m"[0m         [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [32mThen [0m[32mclick the All button in todos screen[0m                        [90m# Top_Rated.clickAllbutton()[0m
+    [32mThen [0m[32mVerify todos data is displayed "[0m[32m[1mTest1[0m[32m"[0m                      [90m# Top_Rated.VerifyTodosDisplayed(String)[0m
+[31mFailure in after hook:[0m[31mTestBase.after(Scenario)[0m
+[31mMessage: [0m[31morg.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+System info: host: 'LAPTOP-P9U8PG08', ip: '192.168.1.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\MANIVA~1\AppData\Local\Temp\scoped_dir8064_23804}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=91.0.4472.124, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 162713e6c9d763e471f31332d9e251c9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:698)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:386)
+	at com.cucumber.framework.helper.TestBase.TestBase.after(TestBase.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+[0m
+      [31morg.openqa.selenium.WebDriverException: chrome not reachable
+        (Session info: chrome=91.0.4472.124)
+        (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 0 milliseconds
+      Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+      System info: host: 'LAPTOP-P9U8PG08', ip: '192.168.1.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\MANIVA~1\AppData\Local\Temp\scoped_dir8064_23804}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=91.0.4472.124, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+      Session ID: 162713e6c9d763e471f31332d9e251c9
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+      	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+      	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:698)
+      	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:386)
+      	at com.cucumber.framework.helper.TestBase.TestBase.after(TestBase.java:121)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at cucumber.runtime.Utils$1.call(Utils.java:40)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+      	at cucumber.runtime.Utils.invoke(Utils.java:34)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+      	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+      	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+      	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+      	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+      	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+      	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+      	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+      	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+      	at org.testng.TestRunner.run(TestRunner.java:505)
+      	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+      	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+      	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+      	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+      	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+      	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+      	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+      	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+      	at org.testng.TestNG.runSuites(TestNG.java:1049)
+      	at org.testng.TestNG.run(TestNG.java:1017)
+      	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+      	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+      	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+      [0m
+
+  Scenario: Enter Multiple Data in Todos list                [90m# featurefile/todos/todos.feature:33[0m
+    [36mGiven [0m[36mopen the valid url in todos application[0m            [90m# Search_Test_step.OpentodosApp()[0m
+    [36mThen [0m[36mEnter the valid search name in search field "[0m[36m[1mTest1[0m[36m"[0m [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [36mThen [0m[36mclick the All button in todos screen[0m                [90m# Top_Rated.clickAllbutton()[0m
+    [36mThen [0m[36mVerify todos data is displayed "[0m[36m[1mTest1[0m[36m"[0m              [90m# Top_Rated.VerifyTodosDisplayed(String)[0m
+    [36mThen [0m[36mEnter the valid search name in search field "[0m[36m[1mTest1[0m[36m"[0m [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [36mThen [0m[36mclick the All button in todos screen[0m                [90m# Top_Rated.clickAllbutton()[0m
+    [36mThen [0m[36mVerify todos data is displayed "[0m[36m[1mTest1[0m[36m"[0m              [90m# Top_Rated.VerifyTodosDisplayed(String)[0m
+
+  Scenario Outline: Verify the  characters ,number and special character allowed to be entered into the search box. [90m# featurefile/todos/todos.feature:43[0m
+    [36mGiven [0m[36mopen the valid url in todos application[0m
+    [36mThen [0m[36mEnter the Data in search text field "<SearchNames>"[0m
+
+    Examples: 
+at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:192)
+      	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:178)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:78)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+      	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:254)
+      	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+      	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:137)
+      	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:178)
+      	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:146)
+      	at com.cucumber.framework.configuration.browser.ChromeBrowser.getChromeDriver(ChromeBrowser.java:45)
+      	at com.cucumber.framework.helper.TestBase.TestBase.getBrowserObject(TestBase.java:83)
+      	at com.cucumber.framework.helper.TestBase.TestBase.setUpDriver(TestBase.java:96)
+      	at com.cucumber.framework.helper.TestBase.TestBase.before(TestBase.java:109)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at cucumber.runtime.Utils$1.call(Utils.java:40)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+      	at cucumber.runtime.Utils.invoke(Utils.java:34)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+      	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+      	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+      	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+      	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+      	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+      	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+      	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+      	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+      	at org.testng.TestRunner.run(TestRunner.java:505)
+      	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+      	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+      	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+      	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+      	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+      	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+      	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+      	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+      	at org.testng.TestNG.runSuites(TestNG.java:1049)
+      	at org.testng.TestNG.run(TestNG.java:1017)
+      	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+      	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+      	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+      Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:23797/status] to be available after 20002 ms
+      	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:102)
+      	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:187)
+      	... 52 more
+      Caused by: java.util.concurrent.TimeoutException
+      	at java.util.concurrent.FutureTask.get(Unknown Source)
+      	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:147)
+      	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:77)
+      	... 53 more
+      [0m
+
+  Scenario: verify Active should be working properly in Todos screen [90m# featurefile/todos/todos.feature:26[0m
+    [32mGiven [0m[32mopen the valid url in todos application[0m                    [90m# Search_Test_step.OpentodosApp()[0m
+    [32mThen [0m[32mEnter the valid search name in search field "[0m[32m[1mTest1[0m[32m"[0m         [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [32mThen [0m[32mclick the All button in todos screen[0m                        [90m# Top_Rated.clickAllbutton()[0m
+    [32mThen [0m[32mVerify todos data is displayed "[0m[32m[1mTest1[0m[32m"[0m                      [90m# Top_Rated.VerifyTodosDisplayed(String)[0m
+[31mFailure in after hook:[0m[31mTestBase.after(Scenario)[0m
+[31mMessage: [0m[31morg.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+System info: host: 'LAPTOP-P9U8PG08', ip: '192.168.1.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\MANIVA~1\AppData\Local\Temp\scoped_dir18452_17566}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=91.0.4472.124, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1eb85e40a5c5d7850ed2b15f0bcbadba
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:698)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:386)
+	at com.cucumber.framework.helper.TestBase.TestBase.after(TestBase.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+[0m
+      [31morg.openqa.selenium.WebDriverException: chrome not reachable
+        (Session info: chrome=91.0.4472.124)
+        (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 0 milliseconds
+      Build info: version: '3.5.1', revision: '9c21bb67ef', time: '2017-08-17T15:26:08.955Z'
+      System info: host: 'LAPTOP-P9U8PG08', ip: '192.168.1.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\MANIVA~1\AppData\Local\Temp\scoped_dir18452_17566}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=91.0.4472.124, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+      Session ID: 1eb85e40a5c5d7850ed2b15f0bcbadba
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+      	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+      	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:698)
+      	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:386)
+      	at com.cucumber.framework.helper.TestBase.TestBase.after(TestBase.java:121)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at cucumber.runtime.Utils$1.call(Utils.java:40)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+      	at cucumber.runtime.Utils.invoke(Utils.java:34)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+      	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+      	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+      	at java.lang.reflect.Method.invoke(Unknown Source)
+      	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+      	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+      	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+      	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+      	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+      	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+      	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+      	at org.testng.TestRunner.run(TestRunner.java:505)
+      	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+      	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+      	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+      	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+      	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+      	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+      	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+      	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+      	at org.testng.TestNG.runSuites(TestNG.java:1049)
+      	at org.testng.TestNG.run(TestNG.java:1017)
+      	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+      	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+      	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+      [0m
+
+  Scenario: Enter Multiple Data in Todos list                [90m# featurefile/todos/todos.feature:33[0m
+    [36mGiven [0m[36mopen the valid url in todos application[0m            [90m# Search_Test_step.OpentodosApp()[0m
+    [36mThen [0m[36mEnter the valid search name in search field "[0m[36m[1mTest1[0m[36m"[0m [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [36mThen [0m[36mclick the All button in todos screen[0m                [90m# Top_Rated.clickAllbutton()[0m
+    [36mThen [0m[36mVerify todos data is displayed "[0m[36m[1mTest1[0m[36m"[0m              [90m# Top_Rated.VerifyTodosDisplayed(String)[0m
+    [36mThen [0m[36mEnter the valid search name in search field "[0m[36m[1mTest1[0m[36m"[0m [90m# Search_Test_step.enter_the_valid_search_name_in_search_field(String)[0m
+    [36mThen [0m[36mclick the All button in todos screen[0m                [90m# Top_Rated.clickAllbutton()[0m
+    [36mThen [0m[36mVerify todos data is displayed "[0m[36m[1mTest1[0m[36m"[0m              [90m# Top_Rated.VerifyTodosDisplayed(String)[0m
+
+  Scenario Outline: Verify the  characters ,number and special character allowed to be entered into the search box. [90m# featurefile/todos/todos.feature:43[0m
+    [36mGiven [0m[36mopen the valid url in todos application[0m
+    [36mThen [0m[36mEnter the Data in search text field "<SearchNames>"[0m
+
+    Examples: 
